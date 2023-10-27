@@ -47,7 +47,7 @@ def clear_highlight():
 # 搜索关键词
 def search_files(directory, query):
     results = []
-    pattern = re.compile(r'{}'.format(query), re.IGNORECASE)
+    pattern = re.compile(r'{}'.format(query), re.IGNORECASE | re.DOTALL)
 
     for root, _, files in os.walk(directory):
         for file in files:

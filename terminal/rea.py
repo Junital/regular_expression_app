@@ -63,7 +63,7 @@ if(args.pattern):
     # print(setting["directory"])
 
     results = []
-    pattern = re.compile(r'{}'.format(args.pattern), re.IGNORECASE)
+    pattern = re.compile(r'{}'.format(args.pattern), re.IGNORECASE | re.DOTALL)
 
     for root, _, files in os.walk(setting["directory"]):
         # print(files)
