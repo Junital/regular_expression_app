@@ -96,7 +96,7 @@ if(args.pattern):
             for piece in pieces:
                 parts.append(result[1][prev_index:piece[0]])
                 parts.append(result[1][piece[0]:piece[1]])
-                prev_index = piece[1] + 1
+                prev_index = piece[1]
             parts.append(result[1][prev_index:])
 
             print(f'{BOLD}{GREEN}{"File:"}{RESET} {GREEN}{result[0]}\n{RESET}')
